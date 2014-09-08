@@ -11,7 +11,6 @@ class topdesk::hardware-add (
   $leverancierid,
   $configuratieid,
   $statusid,
-  $hostname,
   ){
 
   exec { 'hardware-add':
