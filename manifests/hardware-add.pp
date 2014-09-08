@@ -12,7 +12,7 @@ class topdesk::hardware-add (
     command => 'curl -s -G http://topdesk/tas/secure/hardware? \
                 --data-urlencode "action=new" \
                 --data-urlencode "status=1" \
-                --data-urlencode "j_username=${username}" \
+                --data-urlencode "j_username=\'${username}\'" \
                 --data-urlencode "j_password=${password}" \
                 --data-urlencode "replacefield0=soortid" \
                 --data-urlencode "searchfield0=naam" \
