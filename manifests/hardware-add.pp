@@ -10,7 +10,7 @@ class topdesk::hardware-add (
   ){
 
   exec { 'hardware-add':
-    command => "curl -s -G http://topdesk/tas/secure/hardware? \
+    command => "curl -s -G ${url} \
                 --data-urlencode 'action=new' \
                 --data-urlencode 'status=1' \
                 --data-urlencode 'j_username=${username}' \
