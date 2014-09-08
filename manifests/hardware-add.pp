@@ -17,7 +17,7 @@ class topdesk::hardware-add (
                 --data-urlencode 'j_password=${password}' \
                 \
                 --data-urlencode 'field0=naam' \
-                --data-urlencode 'value0=${hostname}' \
+                --data-urlencode 'value0=${fqdn}' \
                 \
                 --data-urlencode 'replacefield1=soortid' \
                 --data-urlencode 'searchfield1=naam' \
