@@ -8,6 +8,9 @@ class topdesk::hardware-add (
   $soortid,
   $merkid,
   $budgethouderid,
+  $leverancierid,
+  $configuratieid,
+  $statusid,
   ){
 
   exec { 'hardware-add':
@@ -22,27 +25,27 @@ class topdesk::hardware-add (
                 \
                 --data-urlencode 'replacefield1=soortid' \
                 --data-urlencode 'searchfield1=naam' \
-                --data-urlencode 'searchvalue1=Server' \
+                --data-urlencode 'searchvalue1=${soortid}' \
                 \
                 --data-urlencode 'replacefield2=merkid' \
                 --data-urlencode 'searchfield2=naam' \
-                --data-urlencode 'searchvalue2=SuperMicro' \
+                --data-urlencode 'searchvalue2=${merkid}' \
                 \
                 --data-urlencode 'replacefield3=budgethouderid' \
                 --data-urlencode 'searchfield3=naam' \
-                --data-urlencode 'searchvalue3=AUT' \
+                --data-urlencode 'searchvalue3=${budgethouderid}' \
                 \
                 --data-urlencode 'replacefield4=leverancierid' \
                 --data-urlencode 'searchfield4=naam' \
-                --data-urlencode 'searchvalue4=Ahead-IT' \
+                --data-urlencode 'searchvalue4=${leverancierid}' \
                 \
                 --data-urlencode 'replacefield5=configuratieid' \
                 --data-urlencode 'searchfield5=naam' \
-                --data-urlencode 'searchvalue5=C002306' \
+                --data-urlencode 'searchvalue5=${configuratieid}' \
                 \
                 --data-urlencode 'replacefield6=statusid' \
                 --data-urlencode 'searchfield6=naam' \
-                --data-urlencode 'searchvalue6=Onbekend' \
+                --data-urlencode 'searchvalue6=${statusid}' \
                 \
                 --data-urlencode 'save=true' ",
     path      => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
