@@ -47,7 +47,7 @@ class topdesk::hardware-add (
                 --data-urlencode 'searchfield6=naam' \
                 --data-urlencode 'searchvalue6=${statusid}' \
                 \
-                --data-urlencode 'field7=hostname' \
+                --data-urlencode 'field7=hostnaam' \
                 --data-urlencode 'value7=${hostname}' \
                 \
                 --data-urlencode 'save=true' ",
