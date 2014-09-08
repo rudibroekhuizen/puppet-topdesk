@@ -1,6 +1,7 @@
 # == Class: topdesk::hardware-add
 #
 class topdesk::hardware-add (
+  $arguments,
   $url,
   $username,
   $password,
@@ -10,7 +11,7 @@ class topdesk::hardware-add (
   ){
 
   exec { 'hardware-add':
-    command => "curl -s -G ${url} \
+    command => "curl ${arguments} ${url} \
                 --data-urlencode 'action=new' \
                 --data-urlencode 'status=1' \
                 --data-urlencode 'j_username=${username}' \
