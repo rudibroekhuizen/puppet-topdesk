@@ -8,8 +8,6 @@ class topdesk::hardware-add (
   $budgethouderid = undef, #AUT
   ){
 
-  notify { $password } 
-
   exec { 'hardware-add':
     command => "curl -s -G http://topdesk/tas/secure/hardware? \
                 --data-urlencode 'action=new' \
