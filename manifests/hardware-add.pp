@@ -48,7 +48,10 @@ class topdesk::hardware-add (
                 --data-urlencode 'searchvalue6=${statusid}' \
                 \
                 --data-urlencode 'field7=hostnaam' \
-                --data-urlencode 'value7=${hostname}' \
+                --data-urlencode 'value7=${fqdn}' \
+                \
+                --data-urlencode 'field8=ipadres' \
+                --data-urlencode 'value8=${ipaddress}' \
                 \
                 --data-urlencode 'save=true' ",
     path      => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
