@@ -47,6 +47,9 @@ class topdesk::hardware-add (
                 --data-urlencode 'searchfield6=naam' \
                 --data-urlencode 'searchvalue6=${statusid}' \
                 \
+                --data-urlencode 'field7=hostname' \
+                --data-urlencode 'value7=${hostname}' \
+                \
                 --data-urlencode 'save=true' ",
     path      => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
     #require   => Class['role_base::packages'],
