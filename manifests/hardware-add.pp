@@ -49,6 +49,7 @@ class topdesk::hardware-add (
                 \
                 --data-urlencode 'save=true' ",
     path      => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
+    require   => Package['curl'],
     logoutput => true,
   }
  
