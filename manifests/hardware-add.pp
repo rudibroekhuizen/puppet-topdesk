@@ -1,14 +1,14 @@
-# == Define: topdesk::hardware-add
+# == Class: topdesk::hardware-add
 #
-define topdesk::hardware-add (
+class topdesk::hardware-add (
   $username       = undef,
   $password       = undef,
-  #$soortid        = undef, #Server
-  #$merkid         = undef, #SuperMicro
-  #$budgethouderid = undef, #AUT
-    
-  ) {
-  exec { '$title':
+  $soortid        = undef, #Server
+  $merkid         = undef, #SuperMicro
+  $budgethouderid = undef, #AUT
+  ){
+
+  exec { 'hardware-add':
     command => 'curl -s -G http://topdesk/tas/secure/hardware? \
                 --data-urlencode "action=new" \
                 --data-urlencode "status=1" \
@@ -36,6 +36,6 @@ define topdesk::hardware-add (
                 --data-urlencode "searchvalue6=Onbekend" \
                 --data-urlencode "save=true" ',
     path => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
-
   }
+ 
 }
