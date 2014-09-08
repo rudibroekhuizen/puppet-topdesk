@@ -1,6 +1,6 @@
-# == Define: topdesk::add_hardware
+# == Define: topdesk::hardware-add
 #
-define topdesk::add_hardware (
+define topdesk::hardware-add (
   $username       = undef,
   $password       = undef,
   #$soortid        = undef, #Server
