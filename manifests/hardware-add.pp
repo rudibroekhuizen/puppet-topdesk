@@ -35,7 +35,8 @@ class topdesk::hardware-add (
                 --data-urlencode 'searchfield6=naam' \
                 --data-urlencode 'searchvalue6=Onbekend' \
                 --data-urlencode 'save=true' ",
-    path => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
+    path      => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
+    logoutput => true,
   }
  
 }
