@@ -1,6 +1,7 @@
 # == Class: topdesk::hardware-add
 #
 class topdesk::hardware-add (
+  $url            = undef,
   $username       = undef,
   $password       = undef,
   $soortid        = undef, #Server
