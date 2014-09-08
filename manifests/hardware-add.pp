@@ -1,12 +1,12 @@
 # == Class: topdesk::hardware-add
 #
 class topdesk::hardware-add (
-  $url            = undef,
-  $username       = undef,
-  $password       = undef,
-  $soortid        = undef, #Server
-  $merkid         = undef, #SuperMicro
-  $budgethouderid = undef, #AUT
+  $url,
+  $username,
+  $password,
+  $soortid,
+  $merkid,
+  $budgethouderid,
   ){
 
   exec { 'hardware-add':
