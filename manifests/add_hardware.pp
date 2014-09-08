@@ -3,9 +3,9 @@
 define topdesk::add_hardware (
   $username       = undef,
   $password       = undef,
-  $soortid        = undef, #Server
-  $merkid         = undef, #SuperMicro
-  $budgethouderid = undef, #AUT
+  #$soortid        = undef, #Server
+  #$merkid         = undef, #SuperMicro
+  #$budgethouderid = undef, #AUT
     
   ) {
   exec { '$title':
