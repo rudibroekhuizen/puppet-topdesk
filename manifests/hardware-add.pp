@@ -53,10 +53,8 @@ class topdesk::hardware-add (
                 --data-urlencode 'field8=ipadres' \
                 --data-urlencode 'value8=${ipaddress}' \
                 \
-                --data-urlencode 'save=true' \
-                > /opt/hardware-add.log",
+                --data-urlencode 'save=true' > /var/log/topdesk.log", 
     path      => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
-    cwd       => /opt,
     logoutput => true,
   }
  
