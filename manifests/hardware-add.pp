@@ -55,6 +55,7 @@ class topdesk::hardware-add (
                 \
                 --data-urlencode 'save=true' > /var/log/topdesk.log", 
     path      => '/usr/bin:/usr/sbin:/bin:/usr/local/bin',
+    creates   => '/var/log/topdesk.log',
     logoutput => true,
   }
  
